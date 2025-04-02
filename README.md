@@ -1,79 +1,100 @@
-# GitHub User Activity CLI
-
-A command-line interface (CLI) tool that fetches and displays the recent activity of a specified GitHub user directly in your terminal.
-
-## Overview
-
-This project allows users to input a GitHub username and retrieve their latest public activities, such as repository pushes, issue creations, and stars. It's a practical tool for monitoring user contributions and activities on GitHub.
-
-## Features
-
-- **Fetch Recent Activity**: Retrieve the latest public events of any GitHub user.
-- **Display in Terminal**: Presents the fetched activities in a clear and concise format within the terminal.
-- **Error Handling**: Gracefully handles errors such as invalid usernames or API failures.
-
-## Usage
-
-```bash
-github-activity <username>
-```
-
-**Example Output:**
-
-```
-- Pushed 3 commits to kamranahmedse/developer-roadmap
-- Opened a new issue in kamranahmedse/developer-roadmap
-- Starred kamranahmedse/developer-roadmap
-```
-
-## Requirements
-
-- **Command-Line Interface**: The application runs from the command line and accepts the GitHub username as an argument.
-- **GitHub API Integration**: Utilizes the GitHub API to fetch user activity. Endpoint used:
-
-  ```
-  https://api.github.com/users/<username>/events
-  ```
-
-  *Example:* `https://api.github.com/users/kamranahmedse/events`
-
-- **Programming Language**: Implemented in a language of your choice without the use of external libraries or frameworks for fetching GitHub activity.
-- **Error Handling**: Manages errors gracefully, including invalid usernames and API failures.
-
-## Getting Started
-
-1. **Clone the Repository**:
-
-   ```bash
-   git clone https://github.com/yourusername/github-activity-cli.git
-   ```
-
-2. **Navigate to the Project Directory**:
-
-   ```bash
-   cd github-activity-cli
-   ```
-
-3. **Build the Application**:
-
-   ```bash
-   # Depending on your chosen programming language
-   ```
-
-4. **Run the Application**:
-
-   ```bash
-   github-activity <username>
-   ```
-
-## Contributing
-
-Contributions are welcome! Please fork the repository and submit a pull request with your enhancements.
-
-## License
-
-This project is licensed under the MIT License. See the LICENSE file for details.
+Perfect — here's an updated `README.md` tailored specifically to your project hosted at [GitHubUserActivityCLI](https://github.com/Kamiyumi/GitHubUserActivityCLI), using **.NET 9** and supporting `dotnet run <username>` as the command:
 
 ---
 
-*This project is inspired by the [GitHub User Activity project on roadmap.sh](https://roadmap.sh/projects/github-user-activity).* 
+```markdown
+# GitHub User Activity CLI
+
+A command-line tool built in **C# (.NET 9)** that fetches and summarizes a GitHub user's recent public activity — commits, stars, issues, pull requests, and more.
+
+Inspired by the [GitHub User Activity project on roadmap.sh](https://roadmap.sh/projects/github-user-activity).
+
+---
+
+## 🚀 Features
+
+- 🔍 Fetches the latest **public activity** of any GitHub user
+- 📦 Summarizes events like:
+  - Pushed commits
+  - Starred repositories
+  - Opened issues or pull requests
+  - Forked or created repositories
+- 📊 Groups identical actions and counts them
+- ✅ Clean output straight to your terminal
+
+---
+
+## 🔧 Requirements
+
+- [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download) (or higher)
+- Internet connection (to access GitHub API)
+
+---
+
+## 📥 Installation
+
+```bash
+git clone https://github.com/Kamiyumi/GitHubUserActivityCLI.git
+cd GitHubUserActivityCLI
+```
+
+---
+
+## ▶️ Usage
+
+Run the CLI with:
+
+```bash
+dotnet run <github-username>
+```
+
+### Example:
+
+```bash
+dotnet run kamranahmedse
+```
+
+### Sample Output:
+
+```
+3× Pushed to kamranahmedse/developer-roadmap
+1× Opened a new issue in kamranahmedse/developer-roadmap
+1× Starred kamranahmedse/developer-roadmap
+```
+
+---
+
+## 🧠 How It Works
+
+- Uses the public GitHub REST API:
+  ```
+  GET https://api.github.com/users/<username>/events
+  ```
+- Maps event types (e.g. `PushEvent`, `WatchEvent`, etc.) into readable actions
+- Groups similar actions and counts them
+
+---
+
+## 🛠 Tech Stack
+
+- C#
+- .NET 9
+- GitHub REST API
+- `HttpClient` + `System.Text.Json`
+
+---
+
+## 🙌 Contributing
+
+Contributions are welcome! Feel free to fork this repo and open a pull request.
+
+---
+
+## 📄 License
+
+MIT License
+
+---
+
+_This project is part of the [roadmap.sh open-source projects](https://roadmap.sh/projects/github-user-activity)._  
+```
