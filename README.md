@@ -1,4 +1,3 @@
-```markdown
 # GitHub User Activity CLI
 
 A command-line tool built in **C# (.NET 9)** that fetches and summarizes a GitHub user's recent public activity — commits, stars, issues, pull requests, and more.
