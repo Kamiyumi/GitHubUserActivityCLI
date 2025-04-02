@@ -1,7 +1,3 @@
-Perfect — here's an updated `README.md` tailored specifically to your project hosted at [GitHubUserActivityCLI](https://github.com/Kamiyumi/GitHubUserActivityCLI), using **.NET 9** and supporting `dotnet run <username>` as the command:
-
----
-
 ```markdown
 # GitHub User Activity CLI
 
