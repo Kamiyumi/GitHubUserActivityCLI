@@ -1,6 +1,6 @@
 # GitHub User Activity CLI
 
-A command-line tool built in **C# (.NET 9)** that fetches and summarizes a GitHub user's recent public activity — commits, stars, issues, pull requests, and more.
+A command-line tool built with **C# (.NET 9)** that fetches and summarizes a GitHub user's recent public activity — commits, stars, issues, pull requests, and more.
 
 Inspired by the [GitHub User Activity project on roadmap.sh](https://roadmap.sh/projects/github-user-activity).
 
@@ -14,15 +14,15 @@ Inspired by the [GitHub User Activity project on roadmap.sh](https://roadmap.sh/
   - Starred repositories
   - Opened issues or pull requests
   - Forked or created repositories
-- 📊 Groups identical actions and counts them
+- 📊 Groups identical actions and shows how many times they occurred
 - ✅ Clean output straight to your terminal
 
 ---
 
 ## 🔧 Requirements
 
-- [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download) (or higher)
-- Internet connection (to access GitHub API)
+- [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download)
+- Internet connection (uses the GitHub API)
 
 ---
 
@@ -37,36 +37,32 @@ cd GitHubUserActivityCLI
 
 ## ▶️ Usage
 
-Run the CLI with:
+Run the application using:
 
 ```bash
-dotnet run <github-username>
+dotnet run
 ```
 
-### Example:
-
-```bash
-dotnet run kamranahmedse
-```
-
-### Sample Output:
+Then, when prompted:
 
 ```
+Enter a GitHub username:
+```
+
+Type a valid username like `kamranahmedse`, `sindresorhus`, or your own.
+
+---
+
+### 💡 Example Output:
+
+```
+Enter a GitHub username:
+kamranahmedse
+
 3× Pushed to kamranahmedse/developer-roadmap
 1× Opened a new issue in kamranahmedse/developer-roadmap
 1× Starred kamranahmedse/developer-roadmap
 ```
-
----
-
-## 🧠 How It Works
-
-- Uses the public GitHub REST API:
-  ```
-  GET https://api.github.com/users/<username>/events
-  ```
-- Maps event types (e.g. `PushEvent`, `WatchEvent`, etc.) into readable actions
-- Groups similar actions and counts them
 
 ---
 
@@ -75,13 +71,13 @@ dotnet run kamranahmedse
 - C#
 - .NET 9
 - GitHub REST API
-- `HttpClient` + `System.Text.Json`
+- `HttpClient` & `System.Text.Json`
 
 ---
 
 ## 🙌 Contributing
 
-Contributions are welcome! Feel free to fork this repo and open a pull request.
+Pull requests are welcome! If you find bugs or want to add features, feel free to fork the repo and submit a PR.
 
 ---
 
@@ -91,5 +87,5 @@ MIT License
 
 ---
 
-_This project is part of the [roadmap.sh open-source projects](https://roadmap.sh/projects/github-user-activity)._  
+_This project is part of the [roadmap.sh open-source projects](https://roadmap.sh/projects/github-user-activity)._
 ```
